@@ -1,3 +1,2 @@
 name: postconditions-examples
-include: .
-flags: --compile-dir=_build
+include: include: . ../../agda2hs-rp/lib/base/
