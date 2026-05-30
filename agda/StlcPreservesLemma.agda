@@ -1,7 +1,7 @@
 module StlcPreservesLemma where
 
 open import Haskell.Prelude
-open import StlcExampleDef
+open import StlcDef
 
 transform : Term → Term
 transform t = t

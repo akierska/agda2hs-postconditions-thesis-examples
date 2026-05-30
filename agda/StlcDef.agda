@@ -1,4 +1,4 @@
-module StlcExampleDef where
+module StlcDef where
 
 open import Haskell.Prelude
 
@@ -13,8 +13,8 @@ data Term : Type where
     Lam : Ty → Term → Term
     App : Term → Term → Term
 
-{-# COMPILE AGDA2HS Ty #-}
-{-# COMPILE AGDA2HS Term #-}
+{-# COMPILE AGDA2HS Ty deriving Eq #-}
+{-# COMPILE AGDA2HS Term deriving Eq #-}
 
 data Lookup : List Ty → Nat → Ty → Type where
     Here  : ∀ {Γ t}
@@ -66,4 +66,4 @@ data Expr (@0 Γ : List Ty) : @0 Ty → Type where
          → Expr Γ t₁
          → Expr Γ t₂
 
-{-# COMPILE AGDA2HS Expr #-}
+{-# COMPILE AGDA2HS Expr deriving Eq #-}
