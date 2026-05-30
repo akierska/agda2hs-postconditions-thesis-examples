@@ -1,10 +1,10 @@
-module StlcLemmaProp where 
+module StlcLemmaProp where
 
 import Test.QuickCheck
 import StlcDef
 import StlcCheckers
 
-transform ::Term -> Term
+transform :: Term -> Term
 transform t = t
 
 prop_preservesTyping :: [Ty]

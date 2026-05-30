@@ -11,6 +11,4 @@ preservesTyping : (Γ : List Ty)
                 → (t : Ty)
                 → Typing Γ e t
                 → Typing Γ (transform e) t
-
 preservesTyping _ _ _ t = t
-
