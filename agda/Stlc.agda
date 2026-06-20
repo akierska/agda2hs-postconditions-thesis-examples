@@ -18,8 +18,8 @@ data Term : Type where
     Lam : Ty → Term → Term
     App : Term → Term → Term
 
-{-# COMPILE AGDA2HS Ty deriving Eq #-}
-{-# COMPILE AGDA2HS Term deriving Eq #-}
+{-# COMPILE AGDA2HS Ty deriving (Eq, Show) #-}
+{-# COMPILE AGDA2HS Term deriving (Eq, Show) #-}
 
 data Lookup : List Ty → Nat → Ty → Type where
     Here  : ∀ {Γ t}

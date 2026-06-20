@@ -1,4 +1,4 @@
-module Main where
+module TypingChecker where
 
 import Stlc
 import Numeric.Natural (Natural)
@@ -104,7 +104,7 @@ checkTyping fuel topFuel ctx e t = backtrack
 -- ============================================================================
 
 fuel :: Fuel
-fuel = 100
+fuel = 2
 
 wellTyped :: [([Ty], Term, Ty)]
 wellTyped =

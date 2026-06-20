@@ -1,2 +1,0 @@
-name: postconditions-examples
-include: include: . ../../agda2hs-rp/lib/base/

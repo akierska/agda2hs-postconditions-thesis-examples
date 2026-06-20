@@ -1,0 +1,4 @@
+# Agda build artifacts
+*.agdai
+_build/
+build/

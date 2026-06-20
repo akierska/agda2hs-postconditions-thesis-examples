@@ -4,14 +4,20 @@ import Numeric.Natural (Natural)
 
 data Ty = N
         | Arr Ty Ty
-            deriving Eq
+            deriving (Eq, Show)
 
 data Term = Con Natural
           | Add Term Term
           | Var Natural
           | Lam Ty Term
           | App Term Term
-              deriving Eq
+              deriving (Eq, Show)
+
+data Expr = ECon Natural
+          | EAdd Expr Expr
+          | EVar Natural
+          | ELam Ty Expr
+          | EApp Expr Expr
 
 transform :: Term -> Term
 transform (Con n) = Con n
@@ -22,3 +28,4 @@ transform (App e₁ e₂) = App (transform e₁) (transform e₂)
 
 transformSigma :: Term -> Term
 transformSigma e = transform e
+
